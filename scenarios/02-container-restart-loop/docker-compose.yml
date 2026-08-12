@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: incident-02
+    # Политика рестарта: перезапускать при падении (ненулевой exit code).
+    # Приложению нужна переменная DB_HOST, но она здесь НЕ задана —
+    # поэтому оно падает при каждом старте, а restart поднимает его снова.
+    # Результат: цикл перезапусков (STATUS: Restarting).
+    restart: on-failure
+    # environment:
+    #   - DB_HOST=db
