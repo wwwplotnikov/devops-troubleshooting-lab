@@ -24,6 +24,7 @@ cd scenarios/01-container-refused
 | 02 | Контейнер в цикле перезапусков | Docker | docker logs, exit codes, переменные окружения |
 | 03 | Контейнер сразу завершается с exit 0 | Docker | PID 1, foreground vs background, exec |
 | 04 | Контейнер убивает OOM killer (exit 137) | Linux, память | OOMKilled, exit 137, cgroup memory limit, dmesg |
+| 05 | Данные пропадают после пересоздания контейнера | Docker, стейт | volumes, точка монтирования vs путь записи, WORKDIR |
 
 ## Требования
 

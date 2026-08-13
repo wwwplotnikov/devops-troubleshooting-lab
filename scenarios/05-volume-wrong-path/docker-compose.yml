@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: incident-05
+    volumes:
+      - appdata:/data
+
+volumes:
+  appdata:
